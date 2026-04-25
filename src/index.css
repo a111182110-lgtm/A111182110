@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Serif+TC:ital,wght@1,400;1,700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif TC", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-art-bg: #F9F8F6;
+  --color-art-text: #1A1A1A;
+  --color-art-accent: #D94F33;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-art-bg text-art-text antialiased selection:bg-art-accent selection:text-white;
+  }
+}
+
+.art-border {
+  @apply border-t border-art-text;
+}
+
+.art-heading-lg {
+  @apply text-7xl md:text-8xl font-black leading-[0.85] tracking-tighter uppercase;
+}
+
+.art-label {
+  @apply text-[10px] tracking-[0.3em] font-bold uppercase;
+}
+
+.art-link {
+  @apply underline decoration-1 underline-offset-4 hover:text-art-accent transition-colors;
+}
